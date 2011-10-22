@@ -5,8 +5,8 @@
 BaseRecoveredData::BaseRecoveredData(Recoverable& obj)
 :obj_(obj)
 {
-	int ret = SystemAllocateSharedMemory(&addrInSharedMemory_, obj.name(),
-			obj.name.c_str(), isFirst_);
+	int ret = SystemAllocateSharedMemory(&addrInSharedMemory_, obj.GetRequiredSharedMemorySize(),
+			obj.name().c_str(), isFirst_);
 
 	if (isFirst_)
 	{

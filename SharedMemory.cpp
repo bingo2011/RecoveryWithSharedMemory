@@ -9,7 +9,6 @@
 #include <sys/stat.h>
 #include <stdlib.h>
 #include "SharedMemory.h"
-#include "LogApi.h"
 
 
 struct shared_memory_db_item

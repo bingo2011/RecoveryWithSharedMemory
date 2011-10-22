@@ -1,3 +1,3 @@
 project(ProcessRecovery)
 cmake_minimum_required(VERSION 2.6)
-add_executable(recover main.cpp SharedMemory.cpp)
+add_executable(recover main.cpp SharedMemory.cpp BaseRecoveredData.cpp AHTest.cpp)

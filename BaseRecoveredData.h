@@ -1,7 +1,8 @@
 #ifndef BASE_RECOVERED_DATA_H_
 #define BASE_RECOVERED_DATA_H_
-
-class Recoverable;
+#include <iostream>
+#include "Recoverable.h"
+using namespace std;
 
 class BaseRecoveredData
 {
@@ -17,12 +18,12 @@ private:
 	friend ostream& operator<<(ostream&, BaseRecoveredData const&);
 };
 
-inline ostream& operator<<(ostream&os, BaseRecoveredData const&arr)
+inline ostream& operator<<(ostream&os, BaseRecoveredData const&data)
 {
-	os << "name=" << obj.name() << " "
-	   << "memory size=" << obj.GetRequiredSharedMemorySize() << " "
-	   << "isFirst=" << isFirst_ << " "
-	   << "address=" << addrInSharedMemory_
+	os << "name=" << data.obj_.name() << " "
+	   << "memory size=" << data.obj_.GetRequiredSharedMemorySize() << " "
+	   << "isFirst=" << data.isFirst_ << " "
+	   << "address=" << data.addrInSharedMemory_
 	   << endl;
 	return os;
 }
