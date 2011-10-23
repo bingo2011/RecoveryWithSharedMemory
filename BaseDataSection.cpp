@@ -1,8 +1,8 @@
-#include "BaseRecoveredData.h"
+#include "BaseDataSection.h"
 #include "Recoverable.h"
 #include "SharedMemory.h"
 
-BaseRecoveredData::BaseRecoveredData(Recoverable& obj)
+BaseDataSection::BaseDataSection(Recoverable& obj)
 :obj_(obj)
 {
 	int ret = SystemAllocateSharedMemory(&addrInSharedMemory_, obj.GetRequiredSharedMemorySize(),
@@ -20,7 +20,7 @@ BaseRecoveredData::BaseRecoveredData(Recoverable& obj)
 
 }
 
-BaseRecoveredData::~BaseRecoveredData()
+BaseDataSection::~BaseDataSection()
 {
 	SystemFreeSharedMemory(addrInSharedMemory_);
 }

@@ -1,8 +1,8 @@
 #ifndef AH_TEST_H_
 #define AH_TEST_H_
+#include "Recoverable.h"
 
-class Recoverable;
-class AHTestRecoveredData;
+class AHTestDataSection;
 
 class AHTest : public Recoverable
 {
@@ -13,7 +13,7 @@ public:
 	void InitLocalObjects();
 	void RecoverLocalObjects();
 private:
-	AHTestRecoveredData* ahTestData;
+	AHTestDataSection* ahTestData;
 };
 
 #endif

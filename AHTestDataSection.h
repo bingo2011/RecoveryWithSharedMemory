@@ -2,10 +2,10 @@
 #define AHTEST_RECOVEREDDATA_H_
 #include "BaseDataSection.h"
 
-class AHTestDataSectioin : BaseDataSection
+class AHTestDataSectioin : public BaseDataSection
 {
 public:
-	AHTestDataSectioin(Recoverable& obj) {}
+	AHTestDataSectioin(Recoverable& obj): BaseDataSection(obj) {}
 	~AHTestDataSectioin() {}
 private:
 	int n_;
