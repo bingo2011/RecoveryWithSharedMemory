@@ -19,3 +19,8 @@ BaseRecoveredData::BaseRecoveredData(Recoverable& obj)
 	}
 
 }
+
+BaseRecoveredData::~BaseRecoveredData()
+{
+	SystemFreeSharedMemory(addrInSharedMemory_);
+}

@@ -2,7 +2,7 @@
 
 AHTest::AHTest()
 {
-
+	ahTestData = new AHTestRecoveredData(this);
 }
 
 AHTest::~AHTest()

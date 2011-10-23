@@ -4,21 +4,21 @@
 #include "Recoverable.h"
 using namespace std;
 
-class BaseRecoveredData
+class BaseDataSection
 {
 public:
-	BaseRecoveredData(Recoverable& obj);
-	virtual ~BaseRecoveredData() {}
+	BaseDataSection(Recoverable& obj);
+	virtual ~BaseDataSection();
 	void* GetAddressInSharedMemory() {return addrInSharedMemory_;}
 private:
 	Recoverable& obj_;
 	bool isFirst_;
 	void* addrInSharedMemory_;
 
-	friend ostream& operator<<(ostream&, BaseRecoveredData const&);
+	friend ostream& operator<<(ostream&, BaseDataSection const&);
 };
 
-inline ostream& operator<<(ostream&os, BaseRecoveredData const&data)
+inline ostream& operator<<(ostream&os, BaseDataSection const&data)
 {
 	os << "name=" << data.obj_.name() << " "
 	   << "memory size=" << data.obj_.GetRequiredSharedMemorySize() << " "
