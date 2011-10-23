@@ -1,8 +1,9 @@
 #ifndef BASE_RECOVERED_DATA_H_
 #define BASE_RECOVERED_DATA_H_
 #include <iostream>
-#include "Recoverable.h"
 using namespace std;
+
+class Recoverable;
 
 class BaseDataSection
 {

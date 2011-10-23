@@ -1,7 +1,7 @@
 #ifndef AH_TEST_H_
 #define AH_TEST_H_
-#include "Recoverable.h"
 
+class Recoverable;
 class AHTestDataSection;
 
 class AHTest : public Recoverable
