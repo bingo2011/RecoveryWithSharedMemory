@@ -1,9 +1,9 @@
 #include "AHTest.h"
-//#include "AHTestDataSection.h"
+#include "AHTestDataSection.h"
 
 AHTest::AHTest()
 {
-	ahTestData = new AHTestDataSection(this);
+	AHTestDataSection *a = new AHTestDataSection(*this);
 }
 
 AHTest::~AHTest()

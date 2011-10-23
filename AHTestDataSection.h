@@ -6,7 +6,7 @@ class AHTestDataSectioin : public BaseDataSection
 {
 public:
 	AHTestDataSectioin(Recoverable& obj): BaseDataSection(obj) {}
-	~AHTestDataSectioin() {}
+	~AHTestDataSectioin(){}
 private:
 	int n_;
 	float f_;
