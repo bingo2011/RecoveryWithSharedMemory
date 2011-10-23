@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-class Recoverable;
+#include "Recoverable.h"
 
 class BaseDataSection
 {
